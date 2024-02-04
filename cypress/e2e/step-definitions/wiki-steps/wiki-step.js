@@ -22,3 +22,12 @@ When(/^user search for "([^"]*)" on Wikipedia$/, (name) => {
 Then(/^user should see "([^"]*)" in the first heading$/, (name) => {
 	wikiPage.getHeading().should('contain', name)
 })
+
+
+Then(/^user should see below languages around the logo$/, (dataTable) => {
+	const languages = dataTable.rawTable.flat()
+
+	wikiPage.getLanguages().each(($el, index) => {
+		cy.wrap($el).should('have.text', languages[index])
+	})
+})

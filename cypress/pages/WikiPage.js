@@ -1,6 +1,4 @@
-const TGBasePage = require('./TGBasePage')
-
-class WikiPage extends TGBasePage{
+class WikiPage{
     // locators
     getSearchInput(){
         return cy.get('#search-input')
@@ -8,6 +6,11 @@ class WikiPage extends TGBasePage{
 
     getHeading(){
         return cy.get('#firstHeading')
+    }
+
+    getLanguages(){
+        return cy.get('nav strong')
+        // return cy.get('.central-featured > div > a')
     }
     // methods
     search(name){
