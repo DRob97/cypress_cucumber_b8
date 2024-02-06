@@ -1,3 +1,4 @@
+@Regression @Northwestern
 Feature: Northwestern Test
 
 

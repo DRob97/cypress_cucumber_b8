@@ -24,7 +24,8 @@ Feature: Login Feature
     #     When user enter username as "TechGloabl" and password as "Test1234"
     #     And user clicks Login button
     #     Then user should see a "You are logged in"
-
+    
+    @LoginForm
     Scenario Outline: Validate Login Form
         Given user navigates to 'https://techglobal-training.com/frontend'
         When user clicks on the "Project - Login Function" card

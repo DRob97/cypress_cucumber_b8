@@ -1,5 +1,6 @@
 Feature: 'dynamic tables tests'
 
+    @Popup
     Scenario: Validate dynamic tables pop-up window
         Given user navigates to 'https://techglobal-training.com/frontend'
         When user clicks on the "Project - Dynamic Tables" card
