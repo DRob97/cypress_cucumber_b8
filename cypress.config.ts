@@ -32,5 +32,6 @@ export default defineConfig({
       // So adding this command below will completely ignore the tests other than our @tag defined in the CLI
       omitFiltered: true,
     },
+    reporter: require.resolve("@badeball/cypress-cucumber-preprocessor/pretty-reporter")
   },
 });

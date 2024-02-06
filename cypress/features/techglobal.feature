@@ -12,9 +12,9 @@ Feature: Interaction with the TechGlobal Training Frontend
     @Smoke
     Scenario: Validate HTML Elements card, Register and Sign In Buttons
         When user clicks on the "Register" button
-        Then the text under it should be 'You clicked on "Register"'
+        Then the text under it should be 'You clicked on “Register”'
         When user clicks on the "Sign in" button
-        Then the text under it should be 'You clicked on "Sign in"'
+        Then the text under it should be 'You clicked on “Sign in”'
 
     Scenario: Validate HTML Elements card, Interact with text inputs - Choose options from dropdown menus
         When user selects "Apple" from the first dropdown menu
