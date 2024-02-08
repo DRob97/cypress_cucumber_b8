@@ -1,0 +1,135 @@
+
+	
+	Tell me About your Framework ?
+
+
+	JavaScript
+	Cypress
+	TDD
+	NodeJS
+		- npm
+		- package.json
+	E2E test file
+	POM
+	Fixtures
+	ESLint
+	commands.js
+	cypress.config.js
+	.env
+	grep - test group
+	Reports
+	Assets folder
+	CI/CD
+	Git
+	Hooks
+
+
+	First Part: Talk about language, NodeJS
+
+	Our framework is using JavaScript as core programming language, and all the other tools are designed around it. We utilize NodeJS for managing dependencies through npm. package.json file in the framework contains metadata, dependencies and their versions, as well as specific scripts to run our tests. These scripts that we store inside the package.json define browsers and options for our tests, which aiding in cross-browser testing, managing environemnts and configurations within the cypress.config.js file.
+
+
+	Secont Part: Tool, TDD, and Testing types
+
+	We employ Cypress for UI test automation, leveraging its features for validations, assertions, and browser capabilites. Cypress is simple and reliable tool and with its flake-resistant features, its providing us a safe environemnt for our UI and API automation. Our framework is based on Test-Driven (TDD), with a focus on wiriting automation scriots first. Our tests are organized in the e2e folder, including various types such as smoke, integration, regression, and end-to-end testing.
+
+	Third Part: POM, and custom commands
+
+	We're implementing Page Object Model (POM) design pattern, which centralizes page-related locators, and their methods inside its seperate folder. This approach, increases reusability through inheritance between the pages through our BasePage. Additionally, we re uzing the custom commands feature of the cypress, and store our commands inside the commands.js. This approach helping us to create reusable methods to create all over the framework without needing any export, and import.
+
+	Forth Part: Config and the Test-Data
+
+	All configurations related to our framework, including timeouts, environemnts, test retries, and browser specific options are centralized, and controlled within the cypress.config.js. For efficient test data management, we use cypress fixtures stored in the fixtures folder in a JSON format. This seperation of test logic from data improves maintainibility with the framework.
+
+	Fifth Part: Hooks and env
+
+	In the framework, we use hooks, such as before, beforeEach, after, and afterEach, helping in setting up tests and enhancing readability, and reusability. Additionaly, we use dotenv package and store our sensitive data like environemnts, user credentials, and some authentications keys inside .env file and keep this file in our .gitignore for the data security.
+
+	Sixth Part: Reports, and grep
+
+	For reporting, we use Mochawesome to fenerate detailed HTML reports, and these reports provide clear information of test outcomes, asisting us to track and analys our test results. To create some test suites and groups in framework, we use cypress-grep dependency, which allowing us to define and tag specific test files, and seperate to their testing types.
+
+	Seventh Part: ESLint
+
+	Also, to provide consistent code quality throughout the framework, we utilize ESLint which helps us to maintain code quality and standarts in the framework.
+
+	Eighth Parth: Version control and CI/CD
+
+	Our framework is integrated and managed through BitBucket, and it is integrated in to our CI/CD pipeline. We use Jenkins as our CI/CD tool, running 9 Smoke tests, and 391 regression tests. Our Smoke tests are scheduled to run daily at 7 A.M., while our Regression suite is executed at the end of the each sprint, or triggered after any hotfix on the dev repository.
+
+
+
+
+
+
+
+
+	First Part: Talk about language JS, NodeJS
+
+
+	Secont Part: Cypress, TDD, and Testing types we use in E2E
+
+
+	Third Part: POM, and custom commands - commands.js
+
+	
+	Forth Part: Config and the Test-Data - Fixture
+
+
+	Fifth Part: Hooks and dotenv - ( sensitive data )
+
+
+	Sixth Part: Mochawesome Reports, and grep
+
+
+	Seventh Part: ESLint
+
+
+	Eighth Parth: Version control and CI/CD Smoke and Regression
+
+
+
+
+
+
+
+
+	BDD
+	JavaScript
+	Cypress
+	Cucumbver
+	NodeJS
+		- npm
+		- package.json
+	step-defs
+	Feature file
+	POM
+	cypress.config.js
+	hooks
+	.env
+	Reports - Cucumber reports.
+	ESLint
+	Git
+    CI/CD
+
+    In our framework, we implement Behaviour-Driven Development (BDD) with the help of Cucumber. Cucumber's use of Gherkin syntax in feature files enables us to define test cases in a more readable format, making it easily understandable for non-tehcnical members of the comany. This approach bridges the gap between technical, and non technical team members.
+
+	Our framework is using JavaScript as core programming language, and all the other tools are designed around it. We utilize NodeJS for managing dependencies through npm. package.json file in the framework contains metadata, dependencies and their versions, as well as specific scripts to run our tests. These scripts that we store inside the package.json define browsers and options for our tests, which aiding in cross-browser testing, managing environemnts and configurations within the cypress.config.js file.
+
+
+	We're implementing Page Object Model (POM) design pattern, which centralizes page-related locators, and their methods inside its seperate folder. This approach, increases reusability through inheritance between the pages through our BasePage. Additionally, we re uzing the custom commands feature of the cypress, and store our commands inside the commands.js. This approach helping us to create reusable methods to create all over the framework without needing any export, and import.
+
+
+	All configurations related to our framework, including timeouts, environemnts, test retries, and browser specific options are centralized, and controlled within the cypress.config.js. Intead of using fixtures to store test data, our framework embeds test data directly within the feature files through cucumber. This method makes each test case straightforward, aligning scenarios with their corresponding data. As a side note; we don't use Cucumber as our main runner, therefore, we don't require a seperate runner file. Instead, we utulize a CLI command to run our tests.
+
+	We have step-definitions folder that contains the code representation of our feature files, automating our test cases written in Gherkin format.
+
+	In the framework, we use hooks, such as before, beforeEach, after, and afterEach, helping in setting up tests and enhancing readability, and reusability. Additionaly, we use dotenv package and store our sensitive data like environemnts, user credentials, and some authentications keys inside .env file and keep this file in our .gitignore for the data security.
+
+	For test grouping, we employ tags in Cucumber to target specific test cases within the feature files.
+
+	Our reporting is handled through Cucumbers built-in reporting tool, offering different types of reports like JSON, and HTML which enhance the readability of our feature files in Gherkin. Additionally, we integrate the multiple-cucumber-html-reporter dependency for more detailed reporting compared to Cucumbers built-in report system.
+
+	Also, to provide consistent code quality throughout the framework, we utilize ESLint which helps us to maintain code quality and standarts in the framework.
+
+	Our framework is integrated and managed through BitBucket, and it is integrated in to our CI/CD pipeline. We use Jenkins as our CI/CD tool, running 9 Smoke tests, and 391 regression tests. Our Smoke tests are scheduled to run daily at 7 A.M., while our Regression suite is executed at the end of the each sprint, or triggered after any hotfix on the dev repository.

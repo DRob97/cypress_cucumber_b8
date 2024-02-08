@@ -1,0 +1,55 @@
+		Background:
+
+		In Cucumber, the 'Background' keyword is used to define steps that are common and need to be executed before each 'Scenario' within the same 'Feature' file. Think of it as a wa to avoid repeating the same steps at the beginning of every 'Scenario', making your tests cleaner and easier to red.
+
+		For example, if you have a web application where multiple tests require a user to be logged in, you can use 'Background' to log in the user. This way, you don't have to write the login steps for each test; they automatically run before each 'Scenario'
+
+		Example:
+
+		Feature: User profile
+
+
+			Background:
+				Given a user has logged in successfully
+
+
+			Scenario: View People
+				When the user navigatest to their profile page
+				Then they see their profile details
+
+
+			Scenario
+				When the user uploads a new profile picture
+				Then the new rofile picture is displayed on their profile
+
+
+
+	Scenario Outline:
+
+		It replaces the `Scenario` keyword in Cucumber. So when you use 'Scenario Outline' keyword, it means you will run the same scenario multiple times with different data sets. This is especially useful when you want to test the same functonality of your application with various inputs.
+
+	Examples Keyword:
+
+		This keyword is used to conjunction with a 'Scenario Outline' to specify the data that will be used to fill in the variables in the scenario template. Examples provide a table of values, where each row representes a set of values that will replace the placeholders in the 'Scenario Outline' for each interation of the test.
+
+		- Scenario Outline: Acts as a template for the scenarios to be tested. Instead of hard-coded valied, you use placeholders like "<username>", "<password>" that will be replaced with actual data from the 'Examples' atble
+
+		- Examples: It must be followed and used with 'Scenario Outline' and defines a table of data that each data seperated by ( | => pipes ). Each subsequent row provides a set of values that will replace these placeholders, with each row representing a seperate test run.
+
+
+		Example:
+
+		Scenario Outline: Validate Login Form
+        Given user navigates to 'https://techglobal-training.com/frontend'
+        When user clicks on the "Project - Login Function" card
+        Then user should see the "Login Function" page heading
+        When user enter username as "<username>" and password as "<password>"
+        And user clicks Login button
+        Then user should see a "<message>"
+
+        Examples:
+            | username   | password | message                   |
+            | johnode    | 123456   | Invalid Username entered! |
+            | tomsmith   | 12345    | Invalid Username entered! |
+            | TechGlobal | 12345    | Invalid Password entered! |
+            | TechGlobal | Test1234 | You are logged in         |
