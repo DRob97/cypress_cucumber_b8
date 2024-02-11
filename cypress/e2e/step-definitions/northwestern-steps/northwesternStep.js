@@ -36,9 +36,9 @@ Then(/^user should see below navbar items$/, (dataTable) => {
 Then(/^user should fill the Form as key-value pairs$/, (dataTable) => {
 	const keyValue = dataTable.rowsHash()
 
-    for(const key in keyValue ) {
+    for(const value in keyValue ) {
         // cy.log(key)
-        cy.log(keyValue[key])
+        cy.log(keyValue[value])
     }
 })
 

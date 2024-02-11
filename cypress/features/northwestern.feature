@@ -17,18 +17,18 @@ Feature: Northwestern Test
         #     | Live       | Chicago    |
 
 
-        # Then user should fill the Form as key-value pairs
-        #     | First name | TechGlobal |
-        #     | Last Name  | School     |
-        #     | From       | U.S        |
-        #     | Live       | Chicago    |
+        Then user should fill the Form as key-value pairs
+            | First name | TechGlobal |
+            | Last Name  | School     |
+            | From       | U.S        |
+            | Live       | Chicago    |
 
 
-        # Then user should handle another type
-        #     | label      | input      | section    |
-        #     | First name | TechGlobal | Personal   |
-        #     | Last Name  | School     | Individual |
-        #     | From       | U.S        | Country    |
-        #     | Live       | Chicago    | Living     |
+        Then user should handle another type
+            | label      | input      | section    |
+            | First name | TechGlobal | Personal   |
+            | Last Name  | School     | Individual |
+            | From       | U.S        | Country    |
+            | Live       | Chicago    | Living     |
 
         
